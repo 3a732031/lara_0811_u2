@@ -36,3 +36,7 @@ Route::get('hello/{name?}', function($name='Everybody') {
     return 'Hello, '.$name;
 });
 
+//使用 artisan 指令了解目前 route 內容
+Route::get('r3', function() {
+    return redirect('r2');
+});
