@@ -40,3 +40,9 @@ Route::get('hello/{name?}', function($name='Everybody') {
 //Route::get('r3', function() {
 //    return redirect('r2');
 //});
+
+//練習 5：設定 Route 前置
+//設定 dashboard路徑的 Route
+Route::get('dashboard',function(){
+    return'dashboard';
+});
