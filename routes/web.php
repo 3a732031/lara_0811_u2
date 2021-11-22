@@ -46,3 +46,10 @@ Route::get('hello/{name?}', function($name='Everybody') {
 Route::get('dashboard',function(){
     return'dashboard';
 });
+
+//設定另一個 Route 以群組包起來設定 prefix
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('dashboard',function(){
+        return'admin dashboard';
+    });
+});
