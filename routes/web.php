@@ -34,9 +34,9 @@ Route::get('r2', function() {
 //修改參數成選擇性
 Route::get('hello/{name?}', function($name='Everybody') {
     return 'Hello, '.$name;
-});
+})->name('hello.index');//Route取名為hello.index
 
 //使用 artisan 指令了解目前 route 內容
-Route::get('r3', function() {
-    return redirect('r2');
-});
+//Route::get('r3', function() {
+//    return redirect('r2');
+//});
